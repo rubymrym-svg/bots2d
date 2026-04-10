@@ -13,9 +13,9 @@ NORMAL_FORCE = MASS * GRAVITY_CONSTANT
 MAX_FRICTION_FORCE = NORMAL_FORCE * FRICTION_COEFFICIENT
 
 
-# Mimics coulomb friction model (model used in b2FrictionJoint)
+# نموذج الاحتكاك الكولومي ( نموذج المستخدم في b2FrictionJoint )
 def get_friction_force(force):
-    if force < 0:  # No friction force if no force applied
+    if force < 0:  #  لاقوه احتكاك اذا لم تطبق قوه
         return 0
     if force > MAX_FRICTION_FORCE:
         return MAX_FRICTION_FORCE
